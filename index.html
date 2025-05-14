@@ -1,2 +1,132 @@
-Pratham Mehta
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pratham Mehta Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-slate-50 text-slate-900">
 
+  <main class="container mx-auto px-4 py-8">
+
+    <!-- About Me -->
+    <section class="md:grid md:grid-cols-2 gap-6 items-center mb-16">
+      <div class="w-48 h-48 mx-auto md:mx-0">
+        <img src="/images/profile.jpg" alt="Pratham Mehta" class="rounded-full object-cover w-full h-full border-4 border-blue-600" />
+      </div>
+      <div>
+        <h1 class="text-4xl font-bold mb-2">Pratham Mehta</h1>
+        <p class="text-xl text-blue-600 mb-4">CS Student | AI Builder | Entrepreneur</p>
+        <p class="text-lg">
+          Computer Science student at UVA specializing in AI/ML and cloud computing. Passionate about building scalable solutions,
+          data-driven insights, and innovative research in high-energy physics.
+        </p>
+      </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-8">Professional & Research Experience</h2>
+      <div class="relative">
+        <div class="absolute left-1/2 top-0 w-1 bg-blue-600 h-full transform -translate-x-1/2"></div>
+
+        <!-- Experience cards -->
+
+        
+              <!-- ML Research Assistant -->
+              <div class="mb-12 flex justify-start w-full">
+                <div class="w-full md:w-5/12">
+                  <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-600">
+                    <h3 class="text-2xl font-bold text-blue-600">ML Research Assistant</h3>
+                    <p class="text-sm text-gray-500 mb-2">Oct 2024 – Present | UVA Physics Department (Fermilab)</p>
+                    <ul class="list-disc list-inside space-y-1">
+                      <li>Simulating and predicting track reconstruction for quantum particles with TensorFlow, Monte Carlo simulations, and ROOT files</li>
+                      <li>Increased track reconstruction accuracy by 12% and ~50% reduction in neural network training time by fine-tuning hyperparameters with Optuna and Bayesian Optimization</li>
+                      <li>Preparing model for deployment on Rivanna (HPC platform) with efficient GPU utilization</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Software & AI Engineer -->
+              <div class="mb-12 flex justify-end w-full">
+                <div class="w-full md:w-5/12">
+                  <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-600">
+                    <h3 class="text-2xl font-bold text-blue-600">Software & AI Engineer</h3>
+                    <p class="text-sm text-gray-500 mb-2">May 2024 – Aug 2024 | Vester (Remote)</p>
+                    <ul class="list-disc list-inside space-y-1">
+                      <li>Built generative-AI pipeline for a wealth-management chatbot with 300+ conversations</li>
+                      <li>Prototyped SMS-based education bot using Twilio</li>
+                      <li>Automated acquisition of 150+ crypto research papers</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Data Science Intern -->
+              <div class="mb-12 flex justify-start w-full">
+                <div class="w-full md:w-5/12">
+                  <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-600">
+                    <h3 class="text-2xl font-bold text-blue-600">Data Science Intern</h3>
+                    <p class="text-sm text-gray-500 mb-2">Jun 2024 – Aug 2024 | Hitachi Vantara Federal (Reston, VA)</p>
+                    <ul class="list-disc list-inside space-y-1">
+                      <li>Boosted legal-doc recommendation accuracy by 120%</li>
+                      <li>Cut lookup times under 2 minutes using Pinecone vector search</li>
+                      <li>Visualized 7.2M SBA records using SQL and Pentaho</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Machine Learning Researcher -->
+              <div class="mb-12 flex justify-end w-full">
+                <div class="w-full md:w-5/12">
+                  <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-600">
+                    <h3 class="text-2xl font-bold text-blue-600">Machine Learning Researcher</h3>
+                    <p class="text-sm text-gray-500 mb-2">Oct 2023 – Feb 2024 | Biocomplexity Institute (Charlottesville, VA)</p>
+                    <ul class="list-disc list-inside space-y-1">
+                      <li>Achieved ~80% accuracy in commodity-flow prediction using ST-GNN</li>
+                      <li>Benchmarked Geometric Temporal Package</li>
+                      <li>Improved model performance by 20%</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+          </section>
+        </div>
+          
+    <!-- Personal Projects -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-8">Personal Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="group bg-white rounded-lg overflow-hidden shadow-md">
+          <img src="/images/autonomous_racing.png" alt="Autonomous Racing Algorithm" class="w-full h-56 object-cover" />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Autonomous Racing Algorithm</h3>
+            <p class="text-gray-700 mb-4">Developed a ROS-based autonomous racing algorithm using PID control and AMCL localization, improving lap times by 24% and achieving 1.5 cm positional accuracy.</p>
+            <div class="flex gap-4">
+              <a href="https://github.com/pmehta17/Autonomous-Racing-Algorithm" target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded">GitHub</a>
+              <a href="#" target="_blank" class="px-4 py-2 bg-gray-800 text-white rounded">Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Me -->
+    <section class="text-center py-12 bg-blue-600 rounded-lg">
+      <h2 class="text-3xl font-semibold text-white mb-6">Contact Me</h2>
+      <div class="flex justify-center gap-6 flex-wrap">
+        <a href="mailto:cbm4kx@virginia.edu" class="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition">Email Me</a>
+        <a href="https://github.com/pmehta17" target="_blank" class="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition">GitHub</a>
+        <a href="https://www.linkedin.com/in/mehta-pratham/" target="_blank" class="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition">LinkedIn</a>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
