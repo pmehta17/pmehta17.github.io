@@ -1,142 +1,1009 @@
 <!DOCTYPE html>
-
-<meta name="description" content="Portfolio of Pratham Mehta – CS @ UVA, specializing in AI, ML, and full-stack engineering.">
-<meta property="og:title" content="Pratham Mehta Portfolio">
-<meta property="og:description" content="AI + Software Engineer passionate about building intelligent systems that scale.">
-<meta property="og:image" content="profile_picture.JPG">
-<meta property="og:url" content="https://pmehta17.github.io/">
-<meta name="twitter:card" content="summary_large_image">
-
-
-
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pratham Mehta Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-slate-50 text-slate-900">
-
-  <main class="container mx-auto px-4 py-8">
-
-    <!-- About Me -->
-    <section class="md:grid md:grid-cols-2 gap-6 items-center mb-16">
-      <div class="w-48 h-48 mx-auto md:mx-0">
-        <img src="profile_picture.JPG" alt="Pratham Mehta" class="rounded-full object-cover w-full h-full border-4 border-blue-600" />
-      </div>
-      <div>
-        <h1 class="text-4xl font-bold mb-2">Pratham Mehta</h1>
-        <p class="text-xl text-blue-600 mb-4">Computer Science student at the University of Virginia </p>
-        <p class="text-lg">
-            I'm a third-year at the University of Virginia studying computer science and applied mathematics. 
-            I have over 3 years of experience with software engineering, building neural networks, and machine learning research. 
-        </p>
-      </div>
-    </section>
-
-    <!-- Professional Experience -->
-    <section class="mb-16">
-      <h2 class="text-3xl font-semibold mb-8">Professional & Research Experience</h2>
-      <div class="relative">
-        <div class="absolute left-1/2 top-0 w-1 bg-blue-600 h-full transform -translate-x-1/2"></div>
-
-        <!-- Experience cards -->
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratham Mehta - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Improved Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FFFDF6',
+                        accent: '#1E40AF'
+                    },
+                    fontFamily: {
+                        'display': ['Space Grotesk', 'sans-serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'gradient': 'gradient 8s ease infinite',
+                    },
+                    keyframes: {
+                        gradient: {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
         
-              <!-- ML Research Assistant -->
-              <div class="mb-12 flex justify-start w-full">
-                <div class="w-full md:w-5/12">
-                  <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-600">
-                    <h3 class="text-2xl font-bold text-blue-600">ML Research Assistant</h3>
-                    <p class="text-sm text-gray-500 mb-2">Oct 2024 – Present | UVA Physics Department (Fermilab)</p>
-                    <ul class="list-disc list-inside space-y-1">
-                      <li>Simulating and predicting track reconstruction for quantum particles with TensorFlow, Monte Carlo simulations, and ROOT files</li>
-                      <li>Increased track reconstruction accuracy by 12% and ~50% reduction in neural network training time by fine-tuning hyperparameters with Optuna and Bayesian Optimization</li>
-                      <li>Preparing model for deployment on Rivanna (HPC platform) with efficient GPU utilization</li>
-                    </ul>
-                  </div>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        
+        /* Smooth animations */
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        /* Timeline styles */
+        .timeline-line {
+            background: linear-gradient(180deg, transparent, #1E40AF 10%, #1E40AF 90%, transparent);
+        }
+        
+        /* Dark mode timeline */
+        .dark .timeline-line {
+            background: linear-gradient(180deg, transparent, #60A5FA 10%, #60A5FA 90%, transparent);
+        }
+        
+        /* Background Pattern */
+        .dot-pattern {
+            background-image: radial-gradient(circle, rgba(30, 64, 175, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+        
+        .dark .dot-pattern {
+            background-image: radial-gradient(circle, rgba(96, 165, 250, 0.05) 1px, transparent 1px);
+        }
+        
+        /* Gradient mesh background */
+        .gradient-mesh {
+            background: linear-gradient(45deg, rgba(30, 64, 175, 0.03) 0%, transparent 70%),
+                        linear-gradient(135deg, rgba(96, 165, 250, 0.03) 0%, transparent 70%),
+                        linear-gradient(225deg, rgba(147, 197, 253, 0.03) 0%, transparent 70%);
+        }
+        
+        .dark .gradient-mesh {
+            background: linear-gradient(45deg, rgba(30, 64, 175, 0.05) 0%, transparent 70%),
+                        linear-gradient(135deg, rgba(96, 165, 250, 0.05) 0%, transparent 70%),
+                        linear-gradient(225deg, rgba(147, 197, 253, 0.05) 0%, transparent 70%);
+        }
+        
+        /* Animated gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #667eea 75%, #764ba2 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 5s ease infinite;
+        }
+        
+        /* Glassmorphism effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .dark .glass {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Chatbot styles */
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .chat-window {
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .dark .chat-window {
+            background: #1e293b;
+        }
+        
+        @media (max-width: 640px) {
+            .chat-window {
+                width: 90vw;
+                height: 70vh;
+                right: 5vw;
+                bottom: 80px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-cream dark:bg-slate-900 text-gray-900 dark:text-slate-100 transition-colors duration-300 dot-pattern">
+    <div class="gradient-mesh fixed inset-0 pointer-events-none"></div>
+    
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 glass">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Name -->
+                <div class="font-display font-bold text-2xl gradient-text">
+                    PM
                 </div>
-              </div>
-          
-              <!-- Software & AI Engineer -->
-              <div class="mb-12 flex justify-end w-full">
-                <div class="w-full md:w-5/12">
-                  <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-600">
-                    <h3 class="text-2xl font-bold text-blue-600">Software & AI Engineer</h3>
-                    <p class="text-sm text-gray-500 mb-2">May 2024 – Aug 2024 | Vester (Remote)</p>
-                    <ul class="list-disc list-inside space-y-1">
-                      <li>Built generative-AI pipeline for a wealth-management chatbot with 300+ conversations</li>
-                      <li>Prototyped SMS-based education bot using Twilio</li>
-                      <li>Automated acquisition of 150+ crypto research papers</li>
-                    </ul>
-                  </div>
+                
+                <!-- Navigation Links - Hidden on mobile -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-accent dark:hover:text-blue-400 transition-colors">Home</a>
+                    <a href="#skills" class="hover:text-accent dark:hover:text-blue-400 transition-colors">Skills</a>
+                    <a href="#experience" class="hover:text-accent dark:hover:text-blue-400 transition-colors">Experience</a>
+                    <a href="#education" class="hover:text-accent dark:hover:text-blue-400 transition-colors">Education</a>
+                    <a href="#entrepreneurship" class="hover:text-accent dark:hover:text-blue-400 transition-colors">Entrepreneurship</a>
+                    <a href="#projects" class="hover:text-accent dark:hover:text-blue-400 transition-colors">Projects</a>
+                    <a href="#contact" class="hover:text-accent dark:hover:text-blue-400 transition-colors">Contact</a>
                 </div>
-              </div>
-          
-              <!-- Data Science Intern -->
-              <div class="mb-12 flex justify-start w-full">
-                <div class="w-full md:w-5/12">
-                  <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-600">
-                    <h3 class="text-2xl font-bold text-blue-600">Data Science Intern</h3>
-                    <p class="text-sm text-gray-500 mb-2">Jun 2024 – Aug 2024 | Hitachi Vantara Federal (Reston, VA)</p>
-                    <ul class="list-disc list-inside space-y-1">
-                      <li>Boosted legal-doc recommendation accuracy by 120%</li>
-                      <li>Cut lookup times under 2 minutes using Pinecone vector search</li>
-                      <li>Visualized 7.2M SBA records using SQL and Pentaho</li>
-                    </ul>
-                  </div>
+                
+                <!-- Dark Mode Toggle & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <!-- Dark Mode Toggle -->
+                    <button id="darkModeToggle" class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">
+                        <i class="fas fa-sun text-yellow-500 dark:hidden"></i>
+                        <i class="fas fa-moon text-blue-300 hidden dark:block"></i>
+                    </button>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="md:hidden p-2">
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </div>
-              </div>
-          
-              <!-- Machine Learning Researcher -->
-              <div class="mb-12 flex justify-end w-full">
-                <div class="w-full md:w-5/12">
-                  <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-600">
-                    <h3 class="text-2xl font-bold text-blue-600">Machine Learning Researcher</h3>
-                    <p class="text-sm text-gray-500 mb-2">Oct 2023 – Feb 2024 | Biocomplexity Institute (Charlottesville, VA)</p>
-                    <ul class="list-disc list-inside space-y-1">
-                      <li>Achieved ~80% accuracy in commodity-flow prediction using ST-GNN</li>
-                      <li>Benchmarked Geometric Temporal Package</li>
-                      <li>Improved model performance by 20%</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-          
             </div>
-          </section>
-        </div>
-          
-    <!-- Personal Projects -->
-    <section class="mb-16">
-      <h2 class="text-3xl font-semibold mb-8">Personal Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="group bg-white rounded-lg overflow-hidden shadow-md">
-          <img src="/images/autonomous_racing.png" alt="Autonomous Racing Algorithm" class="w-full h-56 object-cover" />
-          <div class="p-4">
-            <h3 class="text-xl font-semibold mb-2">Autonomous Racing Algorithm</h3>
-            <p class="text-gray-700 mb-4">Developed a ROS-based autonomous racing algorithm using PID control and AMCL localization, improving lap times by 24% and achieving 1.5 cm positional accuracy.</p>
-            <div class="flex gap-4">
-              <a href="https://github.com/pmehta17/Autonomous-Racing-Algorithm" target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded">GitHub</a>
-              <a href="#" target="_blank" class="px-4 py-2 bg-gray-800 text-white rounded">Demo</a>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <a href="#home" class="block py-2 hover:text-accent dark:hover:text-blue-400">Home</a>
+                <a href="#skills" class="block py-2 hover:text-accent dark:hover:text-blue-400">Skills</a>
+                <a href="#experience" class="block py-2 hover:text-accent dark:hover:text-blue-400">Experience</a>
+                <a href="#education" class="block py-2 hover:text-accent dark:hover:text-blue-400">Education</a>
+                <a href="#entrepreneurship" class="block py-2 hover:text-accent dark:hover:text-blue-400">Entrepreneurship</a>
+                <a href="#projects" class="block py-2 hover:text-accent dark:hover:text-blue-400">Projects</a>
+                <a href="#contact" class="block py-2 hover:text-accent dark:hover:text-blue-400">Contact</a>
             </div>
-          </div>
         </div>
-      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center px-4 py-20">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <!-- Profile Picture -->
+                <div class="flex-shrink-0">
+                    <div class="relative">
+                        <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-accent dark:border-blue-400 shadow-2xl">
+                            <!-- Replace src with your actual image path -->
+                            <img src="profile_picture.jpg" alt="Pratham Mehta" 
+                                class="w-full h-full object-cover"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <!-- Fallback placeholder if image doesn't load -->
+                            <div class="w-full h-full bg-gradient-to-br from-accent to-blue-600 flex items-center justify-center" style="display: none;">
+                                <i class="fas fa-user text-white text-6xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Text Content -->
+                <div class="text-center md:text-left flex-1">
+                    <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-accent via-purple-600 to-blue-600 dark:from-blue-400 dark:via-purple-400 dark:to-blue-600 bg-clip-text text-transparent animate-gradient">
+                        Pratham Mehta
+                    </h1>
+                    <p class="font-display text-2xl md:text-3xl mb-6 text-gray-700 dark:text-slate-300 font-medium">
+                        Full Stack + AI Engineer 
+                    </p>
+                    <p class="text-lg md:text-xl text-gray-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+                            Hey! I'm a 4th year student at the University of Virginia studying Computer Science and Applied Mathematics set to graduate in December 2025. I have over 3 years of experience in full-stack software engineering, building machine learning models, AI interations into existing products, and am deeply passioante about contributing to early-stage startups. 
+
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Contact Me -->
-    <section class="text-center py-12 bg-blue-600 rounded-lg">
-      <h2 class="text-3xl font-semibold text-white mb-6">Contact Me</h2>
-      <div class="flex justify-center gap-6 flex-wrap">
-        <a href="mailto:cbm4kx@virginia.edu" class="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition">Email Me</a>
-        <a href="https://github.com/pmehta17" target="_blank" class="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition">GitHub</a>
-        <a href="https://www.linkedin.com/in/mehta-pratham/" target="_blank" class="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition">LinkedIn</a>
-      </div>
+
+
+        <!-- Experience Section -->
+    <section id="experience" class="py-20 px-4">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="font-display text-4xl font-bold text-center mb-16">Professional & Research Experience</h2>
+            
+            <div class="relative">
+                <!-- Timeline line - centered -->
+                <div class="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 w-0.5 h-full bg-gray-300 dark:bg-slate-600"></div>
+                
+                <!-- Experience 1 -->
+                <div class="relative mb-10 ml-6 md:ml-0 md:grid md:grid-cols-2 md:gap-8 md:items-start">
+                    <!-- Left side - Title and Date -->
+                    <div class="hidden md:block text-right">
+                        <h3 class="text-xl font-bold mb-1">Software & AI Intern</h3>
+                        <p class="text-gray-500 dark:text-slate-500">June - August 2025</p>
+                    </div>
+                    
+                    <!-- Right side - Company and Description -->
+                    <div class="relative md:pl-8">
+                        <!-- Timeline dot -->
+                        <div class="absolute -left-8 md:left-0 md:-translate-x-1/2 top-2 w-3 h-3 bg-white dark:bg-slate-900 border-2 border-accent dark:border-blue-400 rounded-full"></div>
+                        
+                        <!-- Mobile title (shown only on mobile) -->
+                        <div class="md:hidden mb-2">
+                            <h3 class="text-xl font-bold">Software & AI Intern</h3>
+                            <p class="text-sm text-gray-500 dark:text-slate-500">June - August 2025</p>
+                        </div>
+                        
+                        <!-- Content -->
+                        <div>
+                            <p class="text-accent dark:text-blue-400 font-semibold mb-2">Reveal Global Consulting (US Census)</p>
+                            <p class="text-gray-600 dark:text-slate-400 leading-relaxed text-sm">
+                                Developing AI-powered solutions for census data processing and implementing scalable software systems for government operations. Working on machine learning models to improve data quality and automate complex workflows.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience 2 -->
+                <div class="relative mb-10 ml-6 md:ml-0 md:grid md:grid-cols-2 md:gap-8 md:items-start">
+                    <!-- Left side - Title and Date -->
+                    <div class="hidden md:block text-right">
+                        <h3 class="text-xl font-bold mb-1">ML Research Assistant</h3>
+                        <p class="text-gray-500 dark:text-slate-500">October 2024 - May 2025</p>
+                    </div>
+                    
+                    <!-- Right side - Company and Description -->
+                    <div class="relative md:pl-8">
+                        <!-- Timeline dot -->
+                        <div class="absolute -left-8 md:left-0 md:-translate-x-1/2 top-2 w-3 h-3 bg-white dark:bg-slate-900 border-2 border-accent dark:border-blue-400 rounded-full"></div>
+                        
+                        <!-- Mobile title -->
+                        <div class="md:hidden mb-2">
+                            <h3 class="text-xl font-bold">ML Research Assistant</h3>
+                            <p class="text-sm text-gray-500 dark:text-slate-500">October 2024 - May 2025</p>
+                        </div>
+                        
+                        <!-- Content -->
+                        <div>
+                            <p class="text-accent dark:text-blue-400 font-semibold mb-2">UVA Physics / Fermilab</p>
+                            <p class="text-gray-600 dark:text-slate-400 leading-relaxed text-sm">
+                                Conducting cutting-edge research in particle physics using machine learning. Developing neural networks for high-energy physics data analysis at Fermilab.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience 3 -->
+                <div class="relative mb-10 ml-6 md:ml-0 md:grid md:grid-cols-2 md:gap-8 md:items-start">
+                    <!-- Left side - Title and Date -->
+                    <div class="hidden md:block text-right">
+                        <h3 class="text-xl font-bold mb-1">Data Science Intern</h3>
+                        <p class="text-gray-500 dark:text-slate-500">June - August 2024</p>
+                    </div>
+                    
+                    <!-- Right side - Company and Description -->
+                    <div class="relative md:pl-8">
+                        <!-- Timeline dot -->
+                        <div class="absolute -left-8 md:left-0 md:-translate-x-1/2 top-2 w-3 h-3 bg-white dark:bg-slate-900 border-2 border-accent dark:border-blue-400 rounded-full"></div>
+                        
+                        <!-- Mobile title -->
+                        <div class="md:hidden mb-2">
+                            <h3 class="text-xl font-bold">Data Science Intern</h3>
+                            <p class="text-sm text-gray-500 dark:text-slate-500">June - August 2024</p>
+                        </div>
+                        
+                        <!-- Content -->
+                        <div>
+                            <p class="text-accent dark:text-blue-400 font-semibold mb-2">Hitachi Vantara Federal</p>
+                            <p class="text-gray-600 dark:text-slate-400 leading-relaxed text-sm">
+                                Built predictive models for federal data analytics and optimized data pipelines for large-scale processing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience 4 -->
+                <div class="relative mb-10 ml-6 md:ml-0 md:grid md:grid-cols-2 md:gap-8 md:items-start">
+                    <!-- Left side - Title and Date -->
+                    <div class="hidden md:block text-right">
+                        <h3 class="text-xl font-bold mb-1">Machine Learning Researcher</h3>
+                        <p class="text-gray-500 dark:text-slate-500">October 2023 - February 2024</p>
+                    </div>
+                    
+                    <!-- Right side - Company and Description -->
+                    <div class="relative md:pl-8">
+                        <!-- Timeline dot -->
+                        <div class="absolute -left-8 md:left-0 md:-translate-x-1/2 top-2 w-3 h-3 bg-white dark:bg-slate-900 border-2 border-accent dark:border-blue-400 rounded-full"></div>
+                        
+                        <!-- Mobile title -->
+                        <div class="md:hidden mb-2">
+                            <h3 class="text-xl font-bold">Machine Learning Researcher</h3>
+                            <p class="text-sm text-gray-500 dark:text-slate-500">October 2023 - February 2024</p>
+                        </div>
+                        
+                        <!-- Content -->
+                        <div>
+                            <p class="text-accent dark:text-blue-400 font-semibold mb-2">Biocomplexity Institute</p>
+                            <p class="text-gray-600 dark:text-slate-400 leading-relaxed text-sm">
+                                Developed ML models for biological system analysis and published research on complex adaptive systems.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-  </main>
 
+
+    
+<!-- Skills and Technologies -->
+
+<section id="skills-option4" class="py-20 px-4 bg-white dark:bg-slate-800">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">Tech Stack</h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Frontend Card -->
+            <div class="bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-cyan-900/20 dark:to-blue-900/20 p-6 rounded-xl border border-cyan-200 dark:border-cyan-800">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-laptop-code text-2xl text-cyan-600 dark:text-cyan-400 mr-3"></i>
+                    <h3 class="text-lg font-bold text-cyan-700 dark:text-cyan-300">Frontend</h3>
+                </div>
+                <div class="space-y-2 text-sm">
+                    <p class="text-gray-700 dark:text-slate-300">React</p>
+                    <p class="text-gray-700 dark:text-slate-300">TypeScript</p>
+                    <p class="text-gray-700 dark:text-slate-300">JavaScript</p>
+                    <p class="text-gray-700 dark:text-slate-300">HTML/CSS</p>
+                </div>
+            </div>
+            
+            <!-- Backend Card -->
+            <div class="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 rounded-xl border border-green-200 dark:border-green-800">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-server text-2xl text-green-600 dark:text-green-400 mr-3"></i>
+                    <h3 class="text-lg font-bold text-green-700 dark:text-green-300">Backend</h3>
+                </div>
+                <div class="space-y-2 text-sm">
+                    <p class="text-gray-700 dark:text-slate-300">Python</p>
+                    <p class="text-gray-700 dark:text-slate-300">Django</p>
+                    <p class="text-gray-700 dark:text-slate-300">FastAPI</p>
+                    <p class="text-gray-700 dark:text-slate-300">Java</p>
+                </div>
+            </div>
+            
+            <!-- AI/ML Card -->
+            <div class="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-6 rounded-xl border border-purple-200 dark:border-purple-800">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-brain text-2xl text-purple-600 dark:text-purple-400 mr-3"></i>
+                    <h3 class="text-lg font-bold text-purple-700 dark:text-purple-300">AI/ML</h3>
+                </div>
+                <div class="space-y-2 text-sm">
+                    <p class="text-gray-700 dark:text-slate-300">PyTorch</p>
+                    <p class="text-gray-700 dark:text-slate-300">TensorFlow</p>
+                    <p class="text-gray-700 dark:text-slate-300">Keras</p>
+                    <p class="text-gray-700 dark:text-slate-300">Optuna</p>
+                </div>
+            </div>
+            
+            <!-- DevOps Card -->
+            <div class="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-6 rounded-xl border border-orange-200 dark:border-orange-800">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-cogs text-2xl text-orange-600 dark:text-orange-400 mr-3"></i>
+                    <h3 class="text-lg font-bold text-orange-700 dark:text-orange-300">DevOps</h3>
+                </div>
+                <div class="space-y-2 text-sm">
+                    <p class="text-gray-700 dark:text-slate-300">Docker</p>
+                    <p class="text-gray-700 dark:text-slate-300">AWS</p>
+                    <p class="text-gray-700 dark:text-slate-300">Azure</p>
+                    <p class="text-gray-700 dark:text-slate-300">CI/CD</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 px-4 bg-white dark:bg-slate-800">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="font-display text-4xl font-bold text-center mb-16">Education</h2>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-gradient-to-r from-accent to-blue-600 p-1 rounded-lg">
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-lg">
+                        <div class="flex items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-16 h-16 bg-accent/10 dark:bg-blue-400/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-graduation-cap text-2xl text-accent dark:text-blue-400"></i>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold mb-2">University of Virginia</h3>
+                                <p class="text-lg font-semibold text-accent dark:text-blue-400 mb-2">Bachelor of Science in Computer Science</p>
+                                <p class="text-gray-600 dark:text-slate-400 mb-3">School of Engineering and Applied Sciences</p>
+                                <div class="flex items-center text-gray-500 dark:text-slate-500">
+                                    <i class="far fa-calendar-alt mr-2"></i>
+                                    <span>August 2022 - December 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-display text-4xl font-bold text-center mb-12">Certifications</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- AWS Cloud Practitioner -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-lg hover-lift border-l-4 border-orange-500">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center">
+                                <i class="fab fa-aws text-2xl text-orange-600 dark:text-orange-400"></i>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-2">AWS Certified Cloud Practitioner</h3>
+                            <p class="text-gray-600 dark:text-slate-400 mb-2">
+                                Foundational understanding of AWS Cloud concepts, services, and terminology
+                            </p>
+                            <div class="flex items-center space-x-4 text-sm text-gray-500 dark:text-slate-500">
+                                <span><i class="fas fa-certificate mr-1"></i> Amazon Web Services</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- AWS AI Practitioner -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-lg hover-lift border-l-4 border-purple-500">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center">
+                                <i class="fas fa-brain text-2xl text-purple-600 dark:text-purple-400"></i>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-2">AWS Certified AI Practitioner</h3>
+                            <p class="text-gray-600 dark:text-slate-400 mb-2">
+                                Expertise in AI/ML fundamentals and AWS AI services implementation
+                            </p>
+                            <div class="flex items-center space-x-4 text-sm text-gray-500 dark:text-slate-500">
+                                <span><i class="fas fa-certificate mr-1"></i> Amazon Web Services</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Entrepreneurship Section -->
+    <section id="entrepreneurship" class="py-16 px-4 bg-white dark:bg-slate-800">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="font-display text-4xl font-bold mb-8">Entrepreneurship</h2>
+            <div class="bg-gradient-to-r from-accent to-blue-600 p-0.5 rounded-lg">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2 text-accent dark:text-blue-400">
+                        <i class="fas fa-rocket mr-2"></i>Raised $2,000 Pre-Seed Funding
+                    </h3>
+                    <p class="text-gray-700 dark:text-slate-300">
+
+                        Current clinical trial recruitment methods are outdated, often recruiting via word of mouth. Moreover, orphan drugs (drugs for conditions with under 200,000 people affected in the US) have even fewer trials and awareness. 
+
+                      </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-display text-4xl font-bold text-center mb-10">Projects</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Project 1 -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden hover-lift">
+                    <div class="h-32 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                        <i class="fas fa-car text-white text-4xl"></i>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-2">Autonomous Racing</h3>
+                        <p class="text-gray-600 dark:text-slate-400 mb-3 text-sm">
+                            ROS, PID control, AMCL for real-time navigation.
+                        </p>
+                        <div class="flex gap-3 text-sm">
+                            <a href="#" class="text-accent dark:text-blue-400 hover:underline">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="text-accent dark:text-blue-400 hover:underline">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden hover-lift">
+                    <div class="h-32 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center">
+                        <i class="fas fa-robot text-white text-4xl"></i>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-2">Financial LLM Bot</h3>
+                        <p class="text-gray-600 dark:text-slate-400 mb-3 text-sm">
+                            Fine-tuned LLM with SMS integration.
+                        </p>
+                        <div class="flex gap-3 text-sm">
+                            <a href="#" class="text-accent dark:text-blue-400 hover:underline">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="text-accent dark:text-blue-400 hover:underline">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden hover-lift">
+                    <div class="h-32 bg-gradient-to-br from-pink-500 to-red-600 flex items-center justify-center">
+                        <i class="fas fa-comments text-white text-4xl"></i>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-2">MH Screening Bot</h3>
+                        <p class="text-gray-600 dark:text-slate-400 mb-3 text-sm">
+                            MongoDB, OpenAI API, React app.
+                        </p>
+                        <div class="flex gap-3 text-sm">
+                            <a href="#" class="text-accent dark:text-blue-400 hover:underline">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="text-accent dark:text-blue-400 hover:underline">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Placeholder Project -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden hover-lift">
+                    <div class="h-32 bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center">
+                        <i class="fas fa-rocket text-white text-4xl"></i>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-2">Coming Soon</h3>
+                        <p class="text-gray-600 dark:text-slate-400 mb-3 text-sm">
+                            New project in development.
+                        </p>
+                        <div class="text-sm text-gray-400">
+                            <i class="fas fa-clock"></i> In Progress
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-white dark:bg-slate-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-display text-4xl font-bold text-center mb-12">Get In Touch</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Contact Form -->
+                <div>
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                            <input type="text" id="name" name="name" required 
+                                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-700 focus:ring-2 focus:ring-accent dark:focus:ring-blue-400 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" required 
+                                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-700 focus:ring-2 focus:ring-accent dark:focus:ring-blue-400 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" required 
+                                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-700 focus:ring-2 focus:ring-accent dark:focus:ring-blue-400 focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" 
+                            class="w-full bg-accent dark:bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 dark:hover:bg-blue-700 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Connect With Me</h3>
+                        <div class="space-y-3">
+                            <a href="pratham_mehta_resume.pdf" download 
+                                class="flex items-center text-gray-700 dark:text-slate-300 hover:text-accent dark:hover:text-blue-400">
+                                <i class="fas fa-file-pdf mr-3 text-xl"></i>
+                                Download Resume
+                            </a>
+                            <a href="https://github.com/pmehta17" target="_blank"
+                                class="flex items-center text-gray-700 dark:text-slate-300 hover:text-accent dark:hover:text-blue-400">
+                                <i class="fab fa-github mr-3 text-xl"></i>
+                                GitHub
+                            </a>
+                            <a href="https://linkedin.com/in/mehta-pratham" target="_blank"
+                                class="flex items-center text-gray-700 dark:text-slate-300 hover:text-accent dark:hover:text-blue-400">
+                                <i class="fab fa-linkedin mr-3 text-xl"></i>
+                                LinkedIn
+                            </a>
+                            <a href="mailto:mehta.pratham@outlook.com"
+                                class="flex items-center text-gray-700 dark:text-slate-300 hover:text-accent dark:hover:text-blue-400">
+                                <i class="fas fa-envelope mr-3 text-xl"></i>
+                                mehta.pratham@outlook.com
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-cream dark:bg-slate-700 p-6 rounded-lg">
+                        <p class="text-gray-600 dark:text-slate-400">
+                            I'm always interested in discussing new opportunities, collaborations, or just having a chat about technology and innovation. 
+                            Feel free to reach out!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 bg-gray-100 dark:bg-slate-900 text-center text-gray-600 dark:text-slate-400">
+        <p>© 2024 Pratham Mehta. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+        
+        // Check for saved preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            html.classList.add('dark');
+        }
+        
+        darkModeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const theme = html.classList.contains('dark') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Smooth scroll behavior for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+    // <!-- AI Chatbot -->
+    // <div class="chatbot-container" id="chatbotContainer">
+    //     <!-- Chat Button -->
+    //     <button id="chatToggle" class="bg-accent dark:bg-blue-600 text-white rounded-full p-4 shadow-lg hover:scale-110 transition-transform">
+    //         <i class="fas fa-robot text-xl"></i>
+    //     </button>
+        
+    //     <!-- Chat Window -->
+    //     <div id="chatWindow" class="chat-window hidden glass">
+    //         <!-- Chat Header -->
+    //         <div class="bg-accent dark:bg-blue-600 text-white p-4 flex justify-between items-center">
+    //             <div class="flex items-center gap-3">
+    //                 <i class="fas fa-robot"></i>
+    //                 <div>
+    //                     <h3 class="font-bold">AI Assistant</h3>
+    //                     <p class="text-xs opacity-90">Ask me about Pratham's experience</p>
+    //                 </div>
+    //             </div>
+    //             <button id="closeChat" class="hover:opacity-80">
+    //                 <i class="fas fa-times"></i>
+    //             </button>
+    //         </div>
+            
+    //         <!-- Chat Messages -->
+    //         <div id="chatMessages" class="flex-1 p-4 overflow-y-auto space-y-3">
+    //             <div class="bg-gray-100 dark:bg-slate-700 rounded-lg p-3 max-w-[80%]">
+    //                 <p class="text-sm"> Hi! I'm Pratham's AI assistant. I can answer questions about his:</p>
+    //                 <ul class="text-sm mt-2 space-y-1">
+    //                     <li>• Work experience & internships</li>
+    //                     <li>• Technical skills & projects</li>
+    //                     <li>• Education & certifications</li>
+    //                     <li>• Availability for opportunities</li>
+    //                 </ul>
+    //                 <p class="text-sm mt-2">What would you like to know?</p>
+    //             </div>
+    //         </div>
+            
+    //         <!-- Chat Input -->
+    //         <div class="border-t border-gray-200 dark:border-slate-700 p-4">
+    //             <div class="flex gap-2">
+    //                 <input 
+    //                     type="text" 
+    //                     id="chatInput" 
+    //                     placeholder="Ask me anything..."
+    //                     class="flex-1 px-3 py-2 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-accent"
+    //                     onkeypress="if(event.key === 'Enter') sendMessage()"
+    //                 >
+    //                 <button 
+    //                     onclick="sendMessage()" 
+    //                     class="bg-accent dark:bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+    //                 >
+    //                     <i class="fas fa-paper-plane"></i>
+    //                 </button>
+    //             </div>
+    //         </div>
+    //     </div>
+    // </div>
+
+    // <!-- JavaScript -->
+    // <script>
+    //     // Console.log Easter Egg
+    //     console.log('%c Hey there, tech recruiter! ', 'font-size: 24px; font-weight: bold; color: #1E40AF;');
+    //     console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #1E40AF;');
+    //     console.log('%c HIRE ME!', 'font-size: 20px; font-weight: bold; color: #10B981;');
+    //     console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #1E40AF;');
+    //     console.log('%cI\'m Pratham Mehta, and I love building things!', 'font-size: 14px; color: #6B7280;');
+    //     console.log('%c What I bring to the table:', 'font-size: 14px; font-weight: bold; color: #1E40AF;');
+    //     console.log('%c  • Full-stack development (React, Django, FastAPI)', 'font-size: 12px; color: #6B7280;');
+    //     console.log('%c  • Machine Learning expertise (PyTorch, TensorFlow)', 'font-size: 12px; color: #6B7280;');
+    //     console.log('%c  • AWS Certified (Cloud & AI Practitioner)', 'font-size: 12px; color: #6B7280;');
+    //     console.log('%c  • Proven track record with internships at top companies', 'font-size: 12px; color: #6B7280;');
+    //     console.log('%c  • Entrepreneurial mindset (raised pre-seed funding)', 'font-size: 12px; color: #6B7280;');
+    //     console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #1E40AF;');
+    //     console.log('%c Let\'s chat: your.email@example.com', 'font-size: 14px; color: #10B981;');
+    //     console.log('%c LinkedIn: linkedin.com/in/yourusername', 'font-size: 14px; color: #10B981;');
+    //     console.log('%c GitHub: github.com/yourusername', 'font-size: 14px; color: #10B981;');
+    //     console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #1E40AF;');
+    //     console.log('%c PS: You found this easter egg, which shows you pay attention to detail.', 'font-size: 12px; font-style: italic; color: #9CA3AF;');
+    //     console.log('%c    I appreciate that in a recruiter! Let\'s work together! ', 'font-size: 12px; font-style: italic; color: #9CA3AF;');
+        
+    //     // Dark Mode Toggle
+    //     const darkModeToggle = document.getElementById('darkModeToggle');
+    //     const html = document.documentElement;
+        
+    //     // Check for saved preference or default to light mode
+    //     const currentTheme = localStorage.getItem('theme') || 'light';
+    //     if (currentTheme === 'dark') {
+    //         html.classList.add('dark');
+    //     }
+        
+    //     darkModeToggle.addEventListener('click', () => {
+    //         html.classList.toggle('dark');
+    //         const theme = html.classList.contains('dark') ? 'dark' : 'light';
+    //         localStorage.setItem('theme', theme);
+    //     });
+        
+    //     // Mobile Menu Toggle
+    //     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    //     const mobileMenu = document.getElementById('mobileMenu');
+        
+    //     mobileMenuBtn.addEventListener('click', () => {
+    //         mobileMenu.classList.toggle('hidden');
+    //     });
+        
+    //     // Close mobile menu when clicking on a link
+    //     const mobileLinks = mobileMenu.querySelectorAll('a');
+    //     mobileLinks.forEach(link => {
+    //         link.addEventListener('click', () => {
+    //             mobileMenu.classList.add('hidden');
+    //         });
+    //     });
+        
+    //     // Smooth scroll behavior for anchor links
+    //     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    //         anchor.addEventListener('click', function (e) {
+    //             e.preventDefault();
+    //             const target = document.querySelector(this.getAttribute('href'));
+    //             if (target) {
+    //                 target.scrollIntoView({
+    //                     behavior: 'smooth',
+    //                     block: 'start'
+    //                 });
+    //             }
+    //         });
+    //     });
+        
+    //     // Add scroll animation for elements
+    //     const observerOptions = {
+    //         threshold: 0.1,
+    //         rootMargin: '0px 0px -50px 0px'
+    //     };
+        
+    //     const observer = new IntersectionObserver((entries) => {
+    //         entries.forEach(entry => {
+    //             if (entry.isIntersecting) {
+    //                 entry.target.style.opacity = '1';
+    //                 entry.target.style.transform = 'translateY(0)';
+    //             }
+    //         });
+    //     }, observerOptions);
+        
+    //     // Observe all sections
+    //     document.querySelectorAll('section').forEach(section => {
+    //         section.style.opacity = '0';
+    //         section.style.transform = 'translateY(20px)';
+    //         section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    //         observer.observe(section);
+    //     });
+        
+    //     // AI Chatbot functionality
+    //     const chatToggle = document.getElementById('chatToggle');
+    //     const chatWindow = document.getElementById('chatWindow');
+    //     const closeChat = document.getElementById('closeChat');
+    //     const chatInput = document.getElementById('chatInput');
+    //     const chatMessages = document.getElementById('chatMessages');
+        
+    //     // Pratham's knowledge base
+    //     const knowledgeBase = {
+    //         experience: {
+    //             keywords: ['experience', 'work', 'internship', 'job', 'worked', 'intern'],
+    //             response: "Pratham has impressive experience! He's currently a Software & AI Intern at Reveal Global Consulting (US Census) and has previously worked as an ML Research Assistant at UVA Physics/Fermilab, Data Science Intern at Hitachi Vantara Federal, and Machine Learning Researcher at Biocomplexity Institute. He's gained hands-on experience in AI, machine learning, and full-stack development."
+    //         },
+    //         skills: {
+    //             keywords: ['skills', 'technologies', 'languages', 'programming', 'tech stack', 'tools'],
+    //             response: "Pratham is proficient in multiple technologies:\n\n**Languages:** Python, Java, TypeScript, JavaScript, HTML/CSS, R\n\n**Frameworks:** React, Django, FastAPI, PyTorch, TensorFlow, Keras\n\n**Tools:** Docker, Git, PostgreSQL, MongoDB, AWS, Azure, CI/CD\n\nHe's also AWS Certified in both Cloud and AI!"
+    //         },
+    //         projects: {
+    //             keywords: ['projects', 'built', 'created', 'developed', 'portfolio'],
+    //             response: "Pratham has built several impressive projects:\n\n1. **Autonomous Racing Algorithm** - Using ROS, PID control, and AMCL for real-time navigation\n\n2. **Financial LLM + SMS Chatbot** - Fine-tuned language model with SMS integration\n\n3. **Depression Screening Chatbot** - Mental health app using MongoDB, OpenAI API, and React\n\nHe also raised $2,000 in pre-seed funding for a clinical trials platform for orphan drugs!"
+    //         },
+    //         education: {
+    //             keywords: ['education', 'university', 'degree', 'study', 'uva', 'school'],
+    //             response: "Pratham is pursuing a Bachelor of Science in Computer Science at the University of Virginia (UVA), School of Engineering and Applied Sciences. He's expected to graduate in December 2025. He's also earned AWS Cloud Practitioner and AWS AI Practitioner certifications."
+    //         },
+    //         availability: {
+    //             keywords: ['available', 'hire', 'opportunity', 'when', 'start', 'looking'],
+    //             response: "Pratham is actively looking for full-time opportunities starting after his graduation in December 2025. He's also open to discussing internships or part-time roles that align with his skills in AI/ML and full-stack development. Feel free to reach out via the contact section!"
+    //         },
+    //         contact: {
+    //             keywords: ['contact', 'reach', 'email', 'connect', 'talk', 'message'],
+    //             response: "Great! You can reach Pratham through:\n\n📧 Email: your.email@example.com\n💼 LinkedIn: linkedin.com/in/yourusername\n💻 GitHub: github.com/yourusername\n📄 Download his resume from the contact section\n\nHe's always excited to discuss new opportunities!"
+    //         },
+    //         entrepreneurship: {
+    //             keywords: ['startup', 'funding', 'entrepreneurship', 'founder', 'business'],
+    //             response: "Pratham has an entrepreneurial spirit! He successfully raised $2,000 in pre-seed funding for a clinical trials platform specifically designed for orphan drugs. This platform aims to streamline research processes for rare disease treatments, connecting researchers with patients. This demonstrates his ability to identify problems and build solutions that have real-world impact."
+    //         },
+    //         default: {
+    //             keywords: [],
+    //             response: "That's a great question! I can tell you about Pratham's experience, skills, projects, education, or availability. What specific aspect would you like to know more about?"
+    //         }
+    //     };
+        
+    //     chatToggle.addEventListener('click', () => {
+    //         chatWindow.classList.remove('hidden');
+    //         chatToggle.classList.add('hidden');
+    //     });
+        
+    //     closeChat.addEventListener('click', () => {
+    //         chatWindow.classList.add('hidden');
+    //         chatToggle.classList.remove('hidden');
+    //     });
+        
+    //     function sendMessage() {
+    //         const message = chatInput.value.trim();
+    //         if (!message) return;
+            
+    //         // Add user message
+    //         addMessage(message, 'user');
+    //         chatInput.value = '';
+            
+    //         // Find appropriate response
+    //         setTimeout(() => {
+    //             const response = getResponse(message.toLowerCase());
+    //             addMessage(response, 'bot');
+    //         }, 500);
+    //     }
+        
+    //     function addMessage(message, sender) {
+    //         const messageDiv = document.createElement('div');
+    //         messageDiv.className = sender === 'user' 
+    //             ? 'bg-accent dark:bg-blue-600 text-white rounded-lg p-3 max-w-[80%] ml-auto' 
+    //             : 'bg-gray-100 dark:bg-slate-700 rounded-lg p-3 max-w-[80%]';
+            
+    //         // Convert markdown-like formatting to HTML
+    //         const formattedMessage = message
+    //             .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    //             .replace(/\n\n/g, '<br><br>')
+    //             .replace(/\n/g, '<br>');
+            
+    //         messageDiv.innerHTML = `<p class="text-sm">${formattedMessage}</p>`;
+    //         chatMessages.appendChild(messageDiv);
+    //         chatMessages.scrollTop = chatMessages.scrollHeight;
+    //     }
+        
+    //     function getResponse(message) {
+    //         // Check each category for keyword matches
+    //         for (const [key, data] of Object.entries(knowledgeBase)) {
+    //             if (key === 'default') continue;
+                
+    //             for (const keyword of data.keywords) {
+    //                 if (message.includes(keyword)) {
+    //                     return data.response;
+    //                 }
+    //             }
+    //         }
+            
+    //         // Return default response if no keywords match
+    //         return knowledgeBase.default.response;
+    //     }
+    </script>
 </body>
 </html>
